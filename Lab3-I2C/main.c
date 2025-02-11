@@ -50,12 +50,12 @@ void I2C0_IRQHandler(void)
     if(I2C_GET_TIMEOUT_FLAG(I2C0))
     {
         /* Clear I2C0 Timeout Flag */
-        I2C_ClearTimeoutFlag(I2C0);       //Á×§KI2C¶W®É
+        I2C_ClearTimeoutFlag(I2C0);       //ï¿½×§KI2Cï¿½Wï¿½ï¿½
     }
     else
     {
         if(s_I2C0HandlerFn != NULL)
-            s_I2C0HandlerFn(u32Status);   //¨S¦³¶W®É«h¦^¶ÇI2Cªºª¬ºA
+            s_I2C0HandlerFn(u32Status);   //ï¿½Sï¿½ï¿½ï¿½Wï¿½É«hï¿½^ï¿½ï¿½I2Cï¿½ï¿½ï¿½ï¿½ï¿½A
     }
 }
 
@@ -80,9 +80,9 @@ int main()
 	printf("0x31 value  is (0x%X)\n", I2C0_Read(0x53, 0x31));
 	printf("0x38 value  is (0x%X)\n", I2C0_Read(0x53, 0x38));*/
 	   uint8_t devid;
-	   devid = I2C0_Read(0x53, 0x00); // 0x53 ¬O ADXL345 ªº I2C ¦a§}¡A0x00 ¬O DEVID ±H¦s¾¹¦a§}
+	   devid = I2C0_Read(0x53, 0x00); // // 0x53 æ˜¯ ADXL345 çš„ I2C åœ°å€ï¼Œ0x00 æ˜¯ DEVID æš«å­˜å™¨åœ°å€
 
-	    /* ¥´¦Lµ²ªG */
+	    /* ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½G */
 	    if (devid == 0xE5) {
 	        printf("ADXL345 DEVID read successfully: 0x%X\n", devid);
 	    } else {
