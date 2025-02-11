@@ -109,9 +109,9 @@ int main()
 		/*X X_axis = (((X1 << 8) | X0) /(256)) ;
 		Y_axis = (((Y1 << 8) | Y0) /(256)) ;
 		Z_axis = (((Z1 << 8) | Z0) /(256)) ; */
-		X_axis = (float)((int16_t)((X1 << 8) | X0)) / 256.0;
-		Y_axis = (float)((int16_t)((Y1 << 8) | Y0)) / 256.0;
-		Z_axis = (float)((int16_t)((Z1 << 8) | Z0)) / 256.0;
+		X_axis = (float)((int16_t)((X1 << 8) | X0)) / 32.0;
+		Y_axis = (float)((int16_t)((Y1 << 8) | Y0)) / 32.0;
+		Z_axis = (float)((int16_t)((Z1 << 8) | Z0)) / 32.0;
 
 		/*printf("%X  %X\n", X1, X0);
 		printf("%X  %X\n", Y1, Y0);
